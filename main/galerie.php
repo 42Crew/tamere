@@ -13,16 +13,25 @@
       $i = 0;
       $tab = null;
       while ($val = $query->fetch()) {
+        $profile = "../images/profiles/" . $val[1] . ".png";
         $querycomments= $bdd->prepare("SELECT commentaire, flag FROM comments WHERE idmontage=:id ORDER BY `date` ASC");
         $querycomments->execute(array(':id' => $val[3]));
         echo '<div class="photocontainerhome">';
-          echo "<div class='posterhome'><p>$val[0]</p></div>";
+          echo "<div class='posterhome'>";
+          if (file_exists($profile))
+            echo "<img class='posterhomepp' src=$profile />";
+          else
+            echo '<img class="posterhomepp" src="../images/system/profil_vide.jpg" />';
+          echo "<p>$val[0]</p></div>";
           echo "<img class='photohome' src='$val[2]'/> <br/>";
           
           echo '<div class="commentshome">';
           $querylike= $bdd->prepare("SELECT * FROM likes WHERE idmontage=:idmontage AND flag=:flag");
           $querylike->execute(array(':idmontage' => $val[3], ':flag' => $flag));
     
+          $counterlike= $bdd->prepare("SELECT COUNT(*) FROM likes WHERE idmontage=:idmontage");
+          $counterlike->execute(array(':idmontage' => $val[3]));
+          echo $counterlike->fetch()[0] . " likes";
           $like = $querylike->fetch();
           if ($like == null) {
             echo  "<form method='post'action='./like.php'>
@@ -63,3 +72,4 @@
     }
 
 ?>
+

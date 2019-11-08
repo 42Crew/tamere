@@ -18,7 +18,7 @@
             foreach (array_reverse($files) as $image){
                 echo '<form action="./delete.php" method="post">';
                 echo '<input type="hidden" name="id" value="'. $image .'" />';
-                echo '<button  type="submit" class="delete" title="" onclick="return confirm(\'Sure?\')"><img height="180" width="180" src="'. $image .'" alt="" /></button>';
+                echo '<button  type="submit" class="delete" title="" onclick="return confirm(\'Want to delete this?\')"><img height="180" width="180" src="'. $image .'" alt="" /></button>';
                 echo '</form>';
             }
         ?>
