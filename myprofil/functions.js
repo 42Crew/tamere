@@ -10,6 +10,7 @@
         .catch(function(error) {
             document.querySelector('video').hidden = true;
             document.getElementById("uploadedimg").hidden = false;
+            document.getElementById("loadcam").setAttribute("onclick", "");
         });
     }
 
@@ -44,6 +45,9 @@
 
     function preview(image)
     {
+        if (document.querySelector('video').hidden == true && 
+        (document.getElementById('uploadedimg').getAttribute("src") == '../images/system/wrongfile.png' || document.getElementById('uploadedimg').getAttribute("src") == '../images/system/nocam.png'))
+            return false;
         var x = document.getElementById("filtres").querySelectorAll("img");
         var already = -1;
         var i;
@@ -64,14 +68,19 @@
             x[already].remove();
         x = document.getElementById("filtres").querySelectorAll("img");
         document.getElementById("submitcreation").disabled = x.length === 0 ? true : false;
+
     }
 
     function loadFile(event) {
         var uploadedimg = document.getElementById('uploadedimg');
         uploadedimg.hidden = false;
-        uploadedimg.src = URL.createObjectURL(event.target.files[0]);
+        if (event.target.files[0].type == "image/png")
+            uploadedimg.src = URL.createObjectURL(event.target.files[0]);
+        else
+            uploadedimg.src = '../images/system/wrongfile.png';
         document.querySelector('video').hidden = true;
-        document.getElementById("loadcam").hidden = false;
+        if (document.getElementById("loadcam").onClick = "")
+            document.getElementById("loadcam").hidden = false;
         document.getElementById("files").value = null;
       };
     
