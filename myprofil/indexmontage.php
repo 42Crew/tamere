@@ -65,7 +65,7 @@
     <tr>
         <td>
             <div>
-                <form method="post" id="creation" name="savemontage" action="./montage.php" onclick="getElements()">
+                <form method="post" id="creation" name="savemontage" action="./montage.php" onclick="getElements()" onsubmit="return checkBeforeSubmit()">
                     <input type="hidden" name="url" value="" >
                     <input type="hidden" name="width" value="" >
                     <input type="hidden" name="height" value="" >

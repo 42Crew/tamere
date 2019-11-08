@@ -31,7 +31,6 @@
         document.savemontage.url.value = canvas.toDataURL();
         document.savemontage.width.value =  640;
         document.savemontage.height.value = 480;
-        console.log(canvas.toDataURL());
         var x = document.getElementById("filtres").querySelectorAll("img");
         var i;
         for (i = 0; i < x.length; i++) {
@@ -41,6 +40,7 @@
             input.setAttribute("value", x[i].src);
             document.getElementById("creation").prepend(input);
         }
+        // document.getElementById("submitcreation").disabled = true;
     }
 
     function preview(image)
@@ -98,3 +98,11 @@
         document.querySelector('video').hidden = false;
         document.getElementById("loadcam").hidden = true;
       }
+      var wasSubmitted = false;    
+      function checkBeforeSubmit(){
+        if(!wasSubmitted) {
+          wasSubmitted = true;
+          return wasSubmitted;
+        }
+        return false;
+      } 
