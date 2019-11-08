@@ -26,33 +26,45 @@
           echo "<img class='photohome' src='$val[2]'/> <br/>";
           
           echo '<div class="commentshome">';
-          $querylike= $bdd->prepare("SELECT * FROM likes WHERE idmontage=:idmontage AND flag=:flag");
-          $querylike->execute(array(':idmontage' => $val[3], ':flag' => $flag));
+
     
           $counterlike= $bdd->prepare("SELECT COUNT(*) FROM likes WHERE idmontage=:idmontage");
           $counterlike->execute(array(':idmontage' => $val[3]));
           echo $counterlike->fetch()[0] . " likes";
-          $like = $querylike->fetch();
-          if ($like == null) {
-            echo  "<form method='post'action='./like.php'>
-            <input type='hidden' name='id' value='$val[3]' >
-            <input type='hidden' name='flag' value='$flag' >
-            <input type='submit' value='Like'></form>";
-          }
-          else
+
+          if ($flag != NULL)
           {
-            echo  "<form method='post'action='./like.php'>
-            <input type='hidden' name='id' value='$val[3]' >
-            <input type='hidden' name='flag' value='$flag' >
-            <input type='submit' value='DisLike'></form>";
+            $querylike= $bdd->prepare("SELECT * FROM likes WHERE idmontage=:idmontage AND flag=:flag");
+            $querylike->execute(array(':idmontage' => $val[3], ':flag' => $flag));
+            $like = $querylike->fetch();
+            if ($like == null) {
+              echo  "<form method='post'action='./like.php'>
+              <input type='hidden' name='id' value='$val[3]' >
+              <input type='hidden' name='flag' value='$flag' >
+              <input type='submit' value='Like'></form>";
+            }
+            else
+            {
+              echo  "<form method='post'action='./like.php'>
+              <input type='hidden' name='id' value='$val[3]' >
+              <input type='hidden' name='flag' value='$flag' >
+              <input type='submit' value='DisLike'></form>";
+            }
           }
-
-
+          if ($flag != NULL)
+          {
             echo  "<form method='post'action='./commentaire.php'>
                   <input type='hidden' name='id' value='$val[3]' >
                   <input type='hidden' name='flag' value='$flag' >
                   <input type='text' name='comment' value='' required> 
                   <input type='submit' value='Envoyer'></form>";
+          }
+          else
+          {
+            echo  "<br />
+                  <input type='text' name='comment' value='You are not Log' readonly> 
+                  <input type='submit' value='Envoyer' disabled>";           
+          }
             while ($val = $querycomments->fetch()) {
               $commentuser= $bdd->prepare("SELECT username FROM users WHERE flag=:flag");
               $commentuser->execute(array(':flag' => $val[1]));
@@ -72,4 +84,3 @@
     }
 
 ?>
-

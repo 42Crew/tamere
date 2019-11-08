@@ -1,4 +1,9 @@
 <?php
+if (!$_POST['height'] || !$_POST['width'] || !$_POST['url'] || !$_SESSION['flag'])
+{
+    echo "You don't have access to this page";
+    exit();
+}
     session_start();
     function getnumber()
     {

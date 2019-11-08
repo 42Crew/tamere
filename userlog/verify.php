@@ -1,5 +1,10 @@
 <?php
 session_start();
+if (!$_GET["flag"])
+{
+	echo "You don't have access to this page";
+	exit();
+}
 include_once './functiondb/verify.php';
 ?>
 <html>

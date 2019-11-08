@@ -1,5 +1,10 @@
 <?php
     session_start();
+    if (!$_POST['id'] || !$_SESSION['flag'])
+    {
+        echo "You don't have access to this page";
+        exit();
+    }
     $imagetodel = $_POST['id'];
     unlink($imagetodel);
     include_once '../config/database.php';
@@ -12,20 +17,17 @@
         $val = $query->fetch();
         if ($val == null) {
             $query->closeCursor();
-            echo ("-1");
         }
 
         $query= $bdd->prepare("DELETE FROM montages WHERE montage=:montage AND flag=:flag");
         $query->execute(array(':montage' => $_POST['id'], ':flag' => $_SESSION['flag']));
         $query->closeCursor();
-        echo ("0");
 
         $query= $bdd->prepare("DELETE FROM comments WHERE idmontage=:id");
         $query->execute(array(':id' => $val['id']));
         $query->closeCursor();
-        echo ("0");
         } catch (PDOException $e) {
-        echo ($e->getMessage());
+        // echo ($e->getMessage());
     }
     
     header("Location: ./miniatures.php")

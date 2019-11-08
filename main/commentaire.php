@@ -1,5 +1,9 @@
 <?php 
-
+    if (!$_POST['id'] || !$_POST['comment'] || !$_POST['flag'] || !$_SESSION['flag'])
+    {
+        echo "You don't have access to this page";
+        exit();
+    }
     include_once '../config/database.php';
     
     try {

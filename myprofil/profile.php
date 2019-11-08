@@ -1,5 +1,10 @@
 <?php
     session_start();
+    if (!$_SESSION['flag'] || !$_SESSION['username'])
+    {
+        echo "You don't have access to this page";
+        exit();
+    }
     $profile = "../images/profiles/" . $_SESSION['flag'] . ".png";
 ?>
 <html>

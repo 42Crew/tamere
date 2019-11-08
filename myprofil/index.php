@@ -1,3 +1,10 @@
+<?php 
+    if (!$_SESSION['flag'])
+    {
+        echo "You don't have access to this page";
+        exit();
+    }
+?>
 <html>
 <head>
     <style>
