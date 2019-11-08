@@ -47,7 +47,10 @@
     {
         if (document.querySelector('video').hidden == true && 
         (document.getElementById('uploadedimg').getAttribute("src") == '../images/system/wrongfile.png' || document.getElementById('uploadedimg').getAttribute("src") == '../images/system/nocam.png'))
+        {
+            alert("You need to upload image");
             return false;
+        }  
         var x = document.getElementById("filtres").querySelectorAll("img");
         var already = -1;
         var i;
@@ -77,7 +80,10 @@
         if (event.target.files[0].type == "image/png")
             uploadedimg.src = URL.createObjectURL(event.target.files[0]);
         else
+        {
             uploadedimg.src = '../images/system/wrongfile.png';
+            alert("You choose a wrong format");
+        }
         document.querySelector('video').hidden = true;
         if (document.getElementById("loadcam").onClick = "")
             document.getElementById("loadcam").hidden = false;
