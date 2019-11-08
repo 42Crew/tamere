@@ -16,7 +16,7 @@ if (($val = log_user($email, $password)) == -1) {
   $_SESSION['id'] = $val['id'];
   $_SESSION['flag'] = $val['flag'];
   $_SESSION['username'] = $val['username'];
-  header("Location: ./index.php");
+  header("Location: ../index.php");
 }
 
 ?>

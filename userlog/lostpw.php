@@ -10,7 +10,7 @@
 <body>
     <div id="header">
             <center>
-            <h1 id="title"><a href="./index.php" style="color:#07C; text-decoration: none;"> <font color="#FFFFFF">Cam<font color="#07C">a<font color="#07C">gru <font color="#FFFFFF">&reg; </a></h1>
+            <h1 id="title"><a href="../index.php" style="color:#07C; text-decoration: none;"> <font color="#FFFFFF">Cam<font color="#07C">a<font color="#07C">gru <font color="#FFFFFF">&reg; </a></h1>
             <h2 id="title2"><font color="#FFFFFF">Your <font color="#07C">Image Filter <font color="#FFFFFF"> Web App </h2>
             </center>
 			<div id="log"><a href="./login.php" style="color:#07C">Log in</a>
@@ -40,7 +40,7 @@
     </center>
 
     <div id=footer style="position:fixed; bottom:0; left:0px;height: 50px;background-color: #242729; width:100%;">
-			<div id ="title3">- 2019 - @abelkhay</div>
+			<div id ="title3">- 2019 - @abelkhay @amarcel @lbonnette</div>
 </div>
 </body>
 
