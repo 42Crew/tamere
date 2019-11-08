@@ -1,4 +1,6 @@
 <?php 
+    session_start();
+
     if (!$_POST['id'] || !$_POST['flag'] || !$_SESSION['flag'])
     {
         echo "You don't have access to this page";

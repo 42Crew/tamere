@@ -1,4 +1,5 @@
 <?php 
+    session_start();
     if (!$_SESSION['flag'])
     {
         echo "You don't have access to this page";

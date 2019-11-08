@@ -24,7 +24,7 @@
             <?php endif;?>
 
 			<p id="usernameandage"><?php echo $_SESSION['username']?></p>
-            <form  id="settings" class="settings" method="post"action="./index.php">
+            <form  id="settings" class="settings" method="post"action="./indexmontage.php">
                     <input type="submit" value="Faire un montage">
             </form>
             <button id="loadcam" onclick="loadcam()">Parametres</button>

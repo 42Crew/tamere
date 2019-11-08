@@ -1,4 +1,5 @@
 <?php
+session_start();
 if (!$_POST['height'] || !$_POST['width'] || !$_POST['url'] || !$_SESSION['flag'])
 {
     echo "You don't have access to this page";
@@ -52,5 +53,5 @@ if (!$_POST['height'] || !$_POST['width'] || !$_POST['url'] || !$_SESSION['flag'
       }
     add_montage("../images/montages/" . $filename);
    
-    header("Location: ./index.php")
+    header("Location: ./indexmontage.php")
 ?>
