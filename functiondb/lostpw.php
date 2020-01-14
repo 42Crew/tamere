@@ -1,7 +1,7 @@
 <?php
 function reset_password($email) {
   include_once '../config/database.php';
-  include_once './mail.php';
+  include_once '../functiondb/mail.php';
   try {
       $bdd = new PDO($DB_DSN, $DB_USER, $DB_PASSWORD);
       $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

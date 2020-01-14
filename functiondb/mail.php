@@ -12,7 +12,7 @@ function send_verification_email($toAddr, $toUsername, $flag, $ip) {
         <body>
         Hello ' . htmlspecialchars($toUsername) . ' </br>
         To finalyze your subscribtion please click the link below </br>
-        <a href="http://' . $ip . './verify.php?flag=' . $flag . '">Verify my email</a>
+        <a href="http://' . $ip . '/verify.php?flag=' . $flag . '">Verify my email</a>
         </body>
     </html>
   ';

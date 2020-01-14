@@ -51,7 +51,7 @@
         </div>
     
 		<div id=footer style="position:fixed; bottom:0; left:0px;height: 50px;background-color: #242729; width:100%;">
-			<div id ="title3">- 2019 - @abelkhay @amarcel @lbonnette</div>
+			<div id ="title3">- 2019 - @amarcel</div>
 </div>
 <?php endif; ?>
 	</body>

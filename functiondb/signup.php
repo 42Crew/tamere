@@ -1,7 +1,7 @@
 <?php
 function signup($mail, $username, $password, $host) {
   include_once '../config/database.php';
-  include_once './mail.php';
+  include_once '../functiondb/mail.php';
   $mail = strtolower($mail);
   try {
           $bdd = new PDO($DB_DSN, $DB_USER, $DB_PASSWORD);

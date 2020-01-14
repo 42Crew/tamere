@@ -27,7 +27,7 @@ if (strlen($password) < 3) {
   header("Location: ./signupform.php");
   return;
 }
-$url = $_SERVER['HTTP_HOST'] . str_replace("./signup.php", "", $_SERVER['REQUEST_URI']);
+$url = $_SERVER['HTTP_HOST'] . str_replace("/signup.php", "", $_SERVER['REQUEST_URI']);
 signup($mail, $username, $password, $url);
 header("Location: ./signupform.php");
 ?>

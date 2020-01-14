@@ -5,7 +5,7 @@ if (!$_GET["flag"])
 	echo "You don't have access to this page";
 	exit();
 }
-include_once './functiondb/verify.php';
+include_once '../functiondb/verify.php';
 ?>
 <html>
 
@@ -45,7 +45,7 @@ include_once './functiondb/verify.php';
                 </div>
 
 		<div id=footer style="position:fixed; bottom:0; left:0px;height: 50px;background-color: #242729; width:100%;">
-			<div id ="title3">- 2019 - @abelkhay @amarcel @lbonnette</div>
+			<div id ="title3">- 2019 - @amarcel</div>
 </div>
 	</body>
 </html>

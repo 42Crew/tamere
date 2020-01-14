@@ -26,7 +26,7 @@
             Email : <input type="mail" name="email" value=""> <br >
             Login : <input type="text" name="username" value=""> <br >
             Password : <input type="password" name="password" value=""> <br > <br >
-            <input type="submit" id="login-button" name="submit" value="Sign in">
+            <input type="submit" id="login-button" name="submit" value="Sign up">
             <span  style="color:red; left: 25px; position:relative;">
                 <?php
                 echo $_SESSION['error'];
@@ -42,7 +42,7 @@
     </center>
 
     <div id=footer style="position:fixed; bottom:0; left:0px;height: 50px;background-color: #242729; width:100%;">
-			<div id ="title3">- 2019 - @abelkhay @amarcel @lbonnette</div>
+			<div id ="title3">- 2019 - @amarcel</div>
     </div>
 </body>
 
