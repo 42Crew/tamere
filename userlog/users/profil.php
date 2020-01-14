@@ -35,6 +35,8 @@
                 <a href="changeusername.php" style="color:#FFFFFF">&#9830 <font color="#07C"/>Edit <font color="#FFFFFF"/>login</a> <br > <br> <br > <br > <br>
                 <a href="changemail.php" style="color:#FFFFFF">&#9830 <font color="#07C"/>Edit <font color="#FFFFFF"/>e-mail</a> <br > <br> <br > <br > <br >
                 <a href="changepw.php" style="color:#FFFFFF">&#9830 <font color="#07C"/>Edit <font color="#FFFFFF"/>password</a> <br > <br> <br > <br > <br >
+                <a href="notif.php" style="color:#FFFFFF">&#9830 <font color="#07C"/>Activate / Desactivate <font color="#FFFFFF"/>mail for comments</a> <br > <br> <br > <br > <br >
+
 				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 			</div>
 			</div>

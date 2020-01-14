@@ -22,7 +22,8 @@
         `mail` VARCHAR(100) NOT NULL,
         `password` VARCHAR(256) NOT NULL,
         `flag`  VARCHAR(50)NOT NULL,
-        `verified` VARCHAR(1) NOT NULL DEFAULT 'N'
+        `verified` VARCHAR(1) NOT NULL DEFAULT 'N',
+        `notifcomment` VARCHAR(1) NOT NULL DEFAULT 'Y'
       )";
       $bdd->exec($sql);
       echo "Table users created successfully<br/>";

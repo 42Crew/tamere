@@ -56,6 +56,7 @@
             echo  "<form method='post'action='./commentaire.php'>
                   <input type='hidden' name='id' value='$val[3]' >
                   <input type='hidden' name='flag' value='$flag' >
+                  <input type='hidden' name='sendmail' value='$val[1]' >
                   <input type='text' name='comment' value='' required> 
                   <input type='submit' value='Envoyer'></form>";
           }

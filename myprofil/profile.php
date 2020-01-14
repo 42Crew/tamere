@@ -50,7 +50,7 @@
     <script>
         function loadcam(image)
         {
-            window.parent.loadcam(); // On appelle ici notre fonction de callback
+            window.parent.loadcam();
         }
     </script>
 	</body>
