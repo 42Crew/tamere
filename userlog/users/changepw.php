@@ -37,7 +37,6 @@
                 <a href="changeusername.php" style="color:#FFFFFF">&#9830 <font color="#07C"/>Edit <font color="#FFFFFF"/>login</a> <br > <br> <br > <br > <br>
                 <a href="changemail.php" style="color:#FFFFFF">&#9830 <font color="#07C"/>Edit <font color="#FFFFFF"/>e-mail</a> <br > <br> <br > <br > <br >
                 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                <a href="deleteaccount.php"style="color:#07C; font-size:13px;">Delete account?</a>
 				</div>
 			</div>
         </div>
@@ -48,8 +47,8 @@
         <div id="centerlog3">
 		<form id="login-form" action="changepw2.php" method= "POST">
                 E-mail: <input type="text" name="email" value=""> <br >
-                Password: <input type="password" name="password" value=""> <br>
-                New password: <input type="password" name="newpassword" value="">
+                Password: <input type="password" name="password" value="" autocomplete> <br>
+                New password: <input type="password" name="newpassword" value="" autocomplete>
                 <input type="submit" id="login-button" style="top:35px;" name="submit" value="Confirm">
                 <span id="error">
                 <?php

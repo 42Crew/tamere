@@ -23,7 +23,7 @@
     <div id="centerlog">
         <form id="login-form" action="./connect.php" method= "POST">
             E-mail: <input type="text" name="mail" value=""> <br >
-            Password: <a href="./lostpw.php" id="recoveringpw" style="color:#07C"> Lost password ?</a>  <input type="password" name="password" value=""> <br><br >
+            Password: <a href="./lostpw.php" id="recoveringpw" style="color:#07C"> Lost password ?</a>  <input type="password" name="password" value="" autocomplete> <br><br >
             <input type="submit" id="login-button" name="submit" value="Log in">
         </form><br /> <br />
         <span id="error" style="top:10px;">

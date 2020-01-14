@@ -33,9 +33,9 @@
         
         <div id="centerlog3">
             <form id="login-form" action="./changemail2.php" method= "POST">
-                E-mail: <input type="text" name="email" value=""> <br >
+                E-mail: <input type="text" name="email" value="" autocomplete> <br >
                 New e-mail: <input type="text" name="newemail" value=""> <br>
-                Password: <input type="password" name="password" value="">
+                Password: <input type="password" name="password" value="" autocomplete>
                 <input type="submit" id="login-button" style="top:35px;" name="submit" value="Confirm">
                 <span id="error">
                 <?php

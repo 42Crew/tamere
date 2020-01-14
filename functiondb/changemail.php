@@ -27,6 +27,7 @@ function changemail($mail, $newmail, $password) {
           return (0);
       } catch (PDOException $e) {
           $_SESSION['error'] = "ERROR: ".$e->getMessage();
+          return (-1);
       }
 }
 ?>

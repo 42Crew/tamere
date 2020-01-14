@@ -1,7 +1,10 @@
 <?php
 function changeuser($mail, $username, $password) {
-  include_once '../config/database.php';
-
+  $DB_NAME = "camagru";
+  $DB_DSN = "mysql:host=127.0.0.1:3306;dbname=".$DB_NAME;
+  $DB_USER = "root";
+  $DB_PASSWORD = "amarcel";
+  
   $password = hash("whirlpool", $password);
   $mail = strtolower($mail);
   try {
@@ -11,7 +14,7 @@ function changeuser($mail, $username, $password) {
           $query->execute(array(':mail' => $mail, ':password' => $password));
           $val = $query->fetch();
           if ($val == null) {
-            $_SESSION['error'] = "user not found";
+            $_SESSION['error'] = "user not found"; 
             $query->closeCursor();
             return(-1);
           }
@@ -23,6 +26,7 @@ function changeuser($mail, $username, $password) {
           return (0);
       } catch (PDOException $e) {
           $_SESSION['error'] = "ERROR: ".$e->getMessage();
+          return (-1);
       }
 }
 ?>

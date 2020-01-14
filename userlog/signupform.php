@@ -25,7 +25,7 @@
         <form id="login-form" action="./signup.php" method= "POST">
             Email : <input type="mail" name="email" value=""> <br >
             Login : <input type="text" name="username" value=""> <br >
-            Password : <input type="password" name="password" value=""> <br > <br >
+            Password : <input type="password" name="password" value="" autocomplete> <br > <br >
             <input type="submit" id="login-button" name="submit" value="Sign up">
             <span  style="color:red; left: 25px; position:relative;">
                 <?php
