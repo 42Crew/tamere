@@ -6,11 +6,13 @@
         {
             video.srcObject = stream;
             video.addEventListener('click', getElements);
+            document.getElementById("submitcreation").hidden = false;
         })
         .catch(function(error) {
             document.querySelector('video').hidden = true;
             document.getElementById("uploadedimg").hidden = false;
             document.getElementById("loadcam").setAttribute("onclick", "");
+            document.getElementById("submitcreation").hidden = false;
         });
     }
 
@@ -98,6 +100,7 @@
         document.querySelector('video').hidden = false;
         document.getElementById("loadcam").hidden = true;
       }
+
       var wasSubmitted = false;    
       function checkBeforeSubmit(){
         if(!wasSubmitted) {

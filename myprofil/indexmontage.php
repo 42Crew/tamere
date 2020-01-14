@@ -69,7 +69,7 @@
                     <input type="hidden" name="url" value="" >
                     <input type="hidden" name="width" value="" >
                     <input type="hidden" name="height" value="" >
-                    <input id="submitcreation" type="submit" value="Enregistrer le montage" disabled>
+                    <input id="submitcreation" type="submit" value="Enregistrer le montage" disabled hidden>
                 </form>
                 <button><label for="files">Selectionner une image</label></button>
                 <button id="loadcam" onclick="loadcam()" hidden>Retour a la webcam</button>

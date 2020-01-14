@@ -38,7 +38,7 @@
                     foreach (array_reverse($files) as $image){
                         echo '<form action="setprofile.php" method="post" style="display: inline;">';
                         echo '<input type="hidden" name="id" value="'. $image .'" />';
-                        echo '<button type="submit" style="border:none;" title="" onclick="return confirm(\'Set as profile photo?\')">
+                        echo '<button type="submit" style="border:none;background-color:rgb(255, 255, 255);" title="">
                         <img style=""src="'. $image .'" class="pics"/></button>';
                         echo '</form>';
                     }

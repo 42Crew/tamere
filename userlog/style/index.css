@@ -16,7 +16,7 @@
 	color: black;
 	/* border : 0.2px solid; */
 	position: absolute;
-	font-family: cursive;
+	
 	font-weight: bold;
 	height: 780px;
 	width: 1px;
@@ -27,7 +27,7 @@
 	color: black;
 	/* border : 0.2px solid; */
 	position: absolute;
-	font-family: cursive;
+	
 	font-weight: bold;
 	height: 780px;
 	width: 1px;
@@ -38,7 +38,7 @@
 	background-color: #242729;
 	position: relative;
 	display: inline-block;
-	font-family: cursive;
+	
 	font-weight: bold;
 	border-radius: 5px;
 	top: 250px;
@@ -48,7 +48,7 @@
 }
 #centerlog2 {
 	background-color: #242729;
-	font-family: cursive;
+	
 	font-weight: bold;
 	top: 50px;
 	width: 200px;
@@ -61,7 +61,7 @@
 	position: absolute;
 	text-align: center;
 	display: inline-block;
-	font-family: cursive;
+	
 	font-weight: bold;
 	border-radius: 5px;
 	top: 250px;
@@ -131,7 +131,7 @@
 }
 #log {
 	position: absolute;
-	font-family: cursive;
+	
 	font-weight: bold;
 	font-size: large;
 	float: right;
@@ -141,7 +141,7 @@
 }
 #logout {
 	position: absolute;
-	font-family: cursive;
+	
 	font-weight: bold;
 	font-size: 12px;
 	float: right;
@@ -153,14 +153,14 @@
 	cursor:pointer;
 	top: 0px;
 	position: relative;
-	font-family: cursive;
+	
 	font-weight: bold;
 }
 #logoutbutton2 {
 	width:80px;
 	height: 30px;
 	font-size: large;
-	font-family: cursive;
+	
 	font-weight: bold;
 	cursor:pointer;
 	right: 15px;
@@ -176,14 +176,14 @@
 	left: 35px;
 	text-align: left;
 	font-size: 18px;
-	font-family: cursive;
+	
 	font-weight: bold;
 }
 #logoutbutton {
 	width:80px;
 	height: 30px;
 	font-size: large;
-	font-family: cursive;
+	
 	font-weight: bold;
 	cursor:pointer;
 	right: -7px;
@@ -196,7 +196,7 @@ input[type=submit] {
 	width:80px;
 	height: 35px;
 	font-size: large;
-	font-family: cursive;
+	
 	font-weight: bold;
 	cursor:pointer;
 	right: -7px;
@@ -207,7 +207,7 @@ input[type=submit] {
 }
 input[type=text], input[type=password], input[type=mail] {
 	display: flex;
-	font-family: cursive;
+	
 	font-weight: bold;
 	width: 250px;
 	height: 30px;
@@ -217,14 +217,14 @@ input[type=text], input[type=password], input[type=mail] {
 }
 #title2 {
 	color: #07C;
-	font-family: cursive;
+	
 	font-weight: bold;
 	position: relative;
 	top:-30px;
 }
 #title3 {
 	color: #07C;
-	font-family: cursive;
+	
 	font-weight: bold;
 	position: absolute;
 	bottom:10px;
@@ -232,7 +232,7 @@ input[type=text], input[type=password], input[type=mail] {
 }
 #title4 {
 	color: #07C;
-	font-family: cursive;
+	
 	font-weight: bold;
 	font-size: large;
 	position: relative;
@@ -249,7 +249,7 @@ h1 {
 	
 	color: #07C;
 	font-size: 25px;
-	font-family: cursive;
+	
 	font-weight: bold;
 	top:-5px;
 	left: -550px;
