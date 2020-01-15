@@ -30,7 +30,6 @@
 				</div>
 		</div>
     
-		<hr id="vertialhr">
         
         <div id="centerlog3">
             <form id="login-form" action="./changeuse.php" method= "POST">

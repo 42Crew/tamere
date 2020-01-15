@@ -29,7 +29,6 @@
 				</form>
 				</div>
 		</div>
-		<hr id="vertialhr">
         
         <div id="centerlog3">
             <form id="login-form" action="./changemail2.php" method= "POST">

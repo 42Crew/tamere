@@ -42,7 +42,6 @@
         </div>
         </center>
     
-		<hr id="vertialhr">
         
         <div id="centerlog3">
 		<form id="login-form" action="changepw2.php" method= "POST">
